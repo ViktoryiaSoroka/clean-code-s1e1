@@ -6,40 +6,41 @@
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.block-matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.section_add-item_img {
+.block-matrix_img {
   width: 100%;
 }
 
-.aaa .more_inf {
+.block-matrix_inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .aaa { text-align: center;
+  .block-matrix { 
+    text-align: center;
   }
 
 }
-.centered-main-page-element {
+.sections-wrapper {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.additem_input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.section-additem_form {
   display: flex;
 }
 
@@ -48,17 +49,17 @@
   padding: 0px;
 }
 
-.list-item, 
+.list-form, 
 .section-header {
   list-style: none;
 }
 
 .input,
-.button {
+.form-button {
   outline: none;
 }
 
-.button {
+.form-button {
   background: none;
   border: 0px;
   color: #888;
@@ -68,7 +69,7 @@
   cursor: pointer;
 }
 
-.button:hover {
+.form-button:hover {
   color: #3a3a3a;
 }
 
@@ -85,7 +86,7 @@
   text-transform: uppercase;
 }
 
-.input[type="text"] {
+.input_text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -98,7 +99,7 @@
   color: #888;
 }
 
-.input[type="text"]:focus {
+.input_text:focus {
   color: #333;
 }
 
@@ -109,13 +110,13 @@
   margin: 0 0 20px;
 }
 
-.input#new-task {
+.additem_input {
   width: 318px;
 }
 
 /* Task list */
 
-.list-item {
+.list-form {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -124,22 +125,25 @@
   align-items: center;
 }
 
-.list-item > * {
+.form-label,
+.input_checkbox,
+.input_text,
+.form-button {
   vertical-align: middle;
 }
 
-.list-item > .checkbox {
+.input_checkbox {
   margin: 0 10px;
 }
 
-.list-item > .task {
+.list-form .form-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-item > .input[type="text"] {
+.input_text {
   width: 226px;
 }
 
@@ -155,22 +159,22 @@
 
 /* Completed */
 
-#completed-tasks .task {
+#completed-tasks .form-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-.list-item .input[type="text"] {
+.list-form .input_text {
   display: none;
 }
 
-.edit-mode .input[type="text"] {
+.edit-mode_list-form .input_text {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .task {
+.edit-mode_list-form .form-label {
   display: none;
 }
